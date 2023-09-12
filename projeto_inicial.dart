@@ -10,12 +10,15 @@ void main(){
   String nome = 'Gabriel';
   String apelido = 'Biel';
 
-  print(idade);
-  print(altura);
-  print(geek);
-  print('Eu sou $apelido mas meu nome completo '
-  'é: $nome, eu me considero geek? $geek. '
-  'Eu tenho $altura metros de altura e $idade anos de idade');
+  // print(idade);
+  // print(altura);
+  // print(geek);
+  // print('Eu sou $apelido mas meu nome completo '
+  // 'é: $nome, eu me considero geek? $geek. '
+  // 'Eu tenho $altura metros de altura e $idade anos de idade');
 
   // artigo para ler conversão de tipos: https://medium.com/dart-school-by-kmranrg/chapter-3-type-casting-in-dart-76837475772a
+
+  List<String> ListaNomes = ['cleber', 'jhonatan', 'alex', 'gabriel', 'rafael'];
+  print(ListaNomes.first);
 }
