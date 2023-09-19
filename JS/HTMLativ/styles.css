@@ -61,3 +61,18 @@ form button:hover {
 form button:active {
     background: blue;
 }
+
+.informacoes {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+}
+
+.calculo {
+    display: grid;
+    grid-template-columns: 1;
+}
+
+.resultado > p {
+    background: rgb(109, 255, 182);
+    padding: 10px 20px;
+}

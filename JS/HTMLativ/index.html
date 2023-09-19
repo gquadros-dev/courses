@@ -7,18 +7,40 @@
         <title>Modelo</title>
     </head>
     <body>
-        <section class="container">
-            <h1>Lorem ipsum dolor sit amet </h1>
-            <p>
-                consectetur adipisicing elit. Ut 
-                natus quo nihil ab dolores 
-                laboriosam tenetur laborum 
-                fuga mollitia accusantium dolor 
-                nulla repudiandae voluptates, 
-                repellat quisquam itaque at saepe 
-                earum?
-            </p>
+        <section class="container">            
+            <main>
+                <div class="informacoes">
+                    <div>
+                        <h1>IMC</h1>
+                        <p>Menos do que 18, 5</p>
+                        <p>Entre 18,5 e 24,9</p>
+                        <p>Entre 25 e 29,9</p>
+                        <p>Entre 30 e 34,9</p>
+                        <p>Entre 35 e 39,9</p>
+                        <p>Mais do que 40</p>
+                    </div>
+                    <div>
+                        <h1>Resultado</h1>
+                        <p>Abaixo do peso</p>
+                        <p>Peso normal</p>
+                        <p>Sobrepeso</p>
+                        <p>Obesidade grau 1</p>
+                        <p>Obesidade grau 2</p>
+                        <p>Obesidade grau 3</p>
+                    </div>
+                </div>
+                <h1>Calcule seu IMC</h1>
+                <form action="/" id="form">
+                    <label for="input-peso">Peso:</label>
+                    <input type="text" id="input-peso" name="input-peso">
 
+                    <label for="input-altura">Altura:</label>
+                    <input type="text" id="input-altura" name="input-altura">
+
+                    <button type="submit"></button>
+                </form>
+                <div class="resultado"></div>
+            </main>
         </section>
     </body>
     <script src="index.js"></script>
