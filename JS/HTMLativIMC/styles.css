@@ -3,6 +3,8 @@
 :root{
     --primary-color: rgb(17, 86, 102);
     --primary-color-darker: rgb(9, 48, 56);
+    --sucesso: rgb(109, 255, 182);
+    --falha: rgb(241, 25, 18);
 }
 
 * {
@@ -72,7 +74,12 @@ form button:active {
     grid-template-columns: 1;
 }
 
-.resultado > p {
-    background: rgb(109, 255, 182);
+.resultado-top {
+    background: var(--sucesso);
+    padding: 10px 20px;
+}
+
+.resultado-ruim {
+    background: var(--falha);
     padding: 10px 20px;
 }
