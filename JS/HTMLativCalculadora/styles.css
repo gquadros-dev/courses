@@ -106,3 +106,12 @@ form button:active {
 .btn:hover{
     background-color: #9e9e9e;
 }
+
+@media(min-width: 33px) and (max-width: 768px){
+    h1 {
+        text-align: center;
+    }
+    .calculadora {
+        width: 306px;
+    }
+}
