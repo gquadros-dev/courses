@@ -1,9 +1,10 @@
-const form = document.getElementById('form');
+const form        = document.getElementById('form');
+const resultado   = document.querySelector('.resultado');
+const inputPeso   = form.querySelector('#input-peso');
+const inputAltura = form.querySelector('#input-altura');
 
 form.addEventListener('submit', (evento) =>{
     evento.preventDefault();
-    const inputPeso   = form.querySelector('#input-peso');
-    const inputAltura = form.querySelector('#input-altura');
 
     const peso     = Number(inputPeso.value);
     const altura   = Number(inputAltura.value);
@@ -18,12 +19,10 @@ form.addEventListener('submit', (evento) =>{
         return;
     }
 
-    const msg = `Seu IMC é ${imc} (${nivelImc}).`;
-    setResultado(msg, true);
+    setResultado(`Seu IMC é ${imc} (${nivelImc}).`, true);
 });
 
 const setResultado = function(msg, isvalid){
-    const resultado = document.querySelector('.resultado');
     resultado.innerHTML = '';
 
     const p = criaP();
@@ -33,17 +32,11 @@ const setResultado = function(msg, isvalid){
     resultado.appendChild(p);
 }
 
-const criaP = function() {
-    return document.createElement('p');
-}
-
-const getImc = function(peso, altura) {
-    return (peso/(altura**2)).toFixed(2);
-}
+const criaP = () => document.createElement('p');
+const getImc = (peso, altura) => (peso/(altura**2)).toFixed(2);
 
 const getNivelImc = function (imc){
-    const nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade grau 1', 
-        'Obesidade grau 2', 'Obesidade grau 3'];
+    const nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
 
     if(imc >= 39.9)return nivel[5];
     if(imc >= 34.9)return nivel[4]; 

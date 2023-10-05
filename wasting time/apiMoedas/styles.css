@@ -49,3 +49,13 @@ main {
     height: 102px;
 }
 
+.selecionado {
+    margin: 12px;
+    background: #CCC;
+    width: 132px;
+    height: 102px;    
+}
+
+.bloqueado {
+    background: #a88989;
+}
