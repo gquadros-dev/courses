@@ -35,10 +35,3 @@ const p1 = criaPessoa('Luiz', 'Otávio', 1.8, 80);
 p1.nomeCompleto = 'Gabriel Fernando de Quadros';
 console.log(p1.fala());
 
-
-
-
-// Constructor Function 
-
-
-
