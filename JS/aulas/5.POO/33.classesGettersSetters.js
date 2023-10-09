@@ -3,7 +3,7 @@ const _velocidade = Symbol();
 class Carro {
     constructor(nome){
         this.nome = nome;
-        this[_velocidade] = 0;
+        this[_velocidade] = 55;
     }
 
     get velocidade(){
