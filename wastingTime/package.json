@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "pg": "^8.11.3",
+    "requirejs": "^2.3.6"
+  }
+}
