@@ -18,7 +18,7 @@ let senha = '101214';
 
 
 // Importe o módulo 'pg'
-const { Client } = require('pg');
+import { Client } from 'pg';
 
 // Configure a conexão com o banco de dados
 const client = new Client({
