@@ -1,5 +1,5 @@
 {
-  "name": "39.importarexportar",
+  "name": "40.ValidadorCPFWebpack",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -9,5 +9,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3"
+  }
 }
