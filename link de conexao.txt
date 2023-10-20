@@ -1,0 +1,1 @@
+mongodb+srv://gquadros:20023107@curso-js.getid4g.mongodb.net/?retryWrites=true&w=majority
