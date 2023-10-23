@@ -25,7 +25,7 @@ const { middlewareGlobal, checkCsrfError,csrfMiddleware } = require('./src/middl
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));// trata o body
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, 'public', "js")));
 
 
 const sessionOptions = session({

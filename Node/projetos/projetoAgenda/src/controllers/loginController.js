@@ -9,6 +9,7 @@ exports.register = async function(req, res) {
         const login = new Login(req.body);
         await login.register();
     
+        console.log(login.errors.length);
         if(login.errors.length > 0) {
             req.flash('errors', login.errors);
             req.session.save(function(){
