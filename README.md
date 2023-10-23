@@ -4,7 +4,8 @@ Liberado a quem quiser contribuir com algo novo.
 Cursos: 
 - Javascript; ⚡
 - NodeJS; ⚡
-- MongoDB;
+- Express; ⚡
+- MongoDB; ⚡
 - NextJS;
 - ReactJS;
 - TypeScript;
