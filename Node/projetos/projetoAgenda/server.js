@@ -22,10 +22,10 @@ const helmet = require('helmet');
 const csrf = require('csurf');
 const { middlewareGlobal, checkCsrfError,csrfMiddleware } = require('./src/middlewares/middleware');
 
-app.use(helmet());
+// app.use(helmet());
 app.use(express.urlencoded({ extended: true }));// trata o body
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname, 'public', "js")));
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 
 const sessionOptions = session({
