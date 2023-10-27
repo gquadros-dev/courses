@@ -23,5 +23,9 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
+    'class-methods-use-this': 'off',
+    'space-unary-ops': 'off',
+    'import/first': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };
