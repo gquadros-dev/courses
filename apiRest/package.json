@@ -19,10 +19,10 @@
     "sequelize-cli": "^6.6.1",
     "sucrase": "^3.34.0"
   },
-  "description": "",
   "dependencies": {
     "express": "^4.18.2",
     "mariadb": "^3.2.2",
     "sequelize": "^6.33.0"
-  }
+  },
+  "description": ""
 }
