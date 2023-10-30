@@ -27,5 +27,6 @@ module.exports = {
     'space-unary-ops': 'off',
     'import/first': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'no-param-reassign': 'off',
   },
 };
