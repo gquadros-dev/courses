@@ -19,5 +19,5 @@ show -> mostra um usuário -> GET
 update -> atualiza um usuário -> PATCH ou PUT
 */
 
-router.get('/', userController.index); // Não deve existir
+// router.get('/', userController.index); // Não deve existir
 // router.get('/:id', userController.show);// Não deve existir

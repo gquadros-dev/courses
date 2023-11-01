@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "nodemon server.js",
     "build": "parcel build src/index.html"
   },
   "devDependencies": {
@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@cubejs-client/core": "^0.31.0",
-    "chart.js": "^4.0.0"
+    "chart.js": "^4.0.0",
+    "nodemon": "^3.0.1",
+    "sucrase": "^3.34.0"
   }
 }
