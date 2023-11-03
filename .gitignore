@@ -1,5 +1,13 @@
+## IGNORE FOLDERS ##
 node_modules
+dist
+
+
+## IGNORE CONFIG FILES ##
 .env
-*.png
-*.jpg
+
+
+## IGNORE IMAGE FILES ##
 *.jpeg
+*.jpg
+*.png
