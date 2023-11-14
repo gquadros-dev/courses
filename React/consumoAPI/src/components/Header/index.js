@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import history from '../../services/history';
 
 import * as actions from '../../store/modules/Auth/actions';
@@ -21,6 +22,7 @@ export default function Header() {
     e.preventDefault();
     dispatch(actions.loginFailure());
     history.push('/');
+    toast.info('Você deslogou da sua conta');
   };
 
   return (

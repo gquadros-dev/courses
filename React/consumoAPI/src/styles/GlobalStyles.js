@@ -45,7 +45,8 @@ export default createGlobalStyle`
   }
 
   body .Toastify .Toastify__toast-container .Toastify__toast--success {
-    background: ${colors.successColor}
+    background: ${colors.successColor};
+    color: white;
   }
 
   body .Toastify .Toastify__toast-container .Toastify__toast--info {
@@ -58,7 +59,9 @@ export default createGlobalStyle`
   }
 
   body .Toastify .Toastify__toast-container .Toastify__toast--warning {
-    background: ${colors.warningColor}
+    background: white;
+    box-shadow: 3px, -5px, 5px rgb(0,0,0);
+    /* color: white; */
   }
 `;
 

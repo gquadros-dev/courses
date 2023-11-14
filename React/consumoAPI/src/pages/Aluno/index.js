@@ -2,22 +2,29 @@ import React, { useState, useEffect } from 'react';
 import { get } from 'lodash';
 import { isEmail, isInt, isFloat } from 'validator';
 import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux';
+import { FaUserCircle, FaEdit } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { Container } from '../../styles/GlobalStyles';
-import { Form } from './styled';
+import { Form, ProfilePicture, Title } from './styled';
 import Loading from '../../components/Loading';
 import axios from '../../services/axios';
 import history from '../../services/history';
+import * as actions from '../../store/modules/Auth/actions';
 
 export default function Aluno({ match }) {
-  const id = get(match, 'params.id', 0);
+  const dispatch = useDispatch();
+
+  const id = get(match, 'params.id', '');
   const [nome, setNome] = useState('');
   const [sobrenome, setSobrenome] = useState('');
   const [email, setEmail] = useState('');
   const [idade, setIdade] = useState('');
   const [peso, setPeso] = useState('');
   const [altura, setAltura] = useState('');
+  const [foto, setFoto] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -27,7 +34,9 @@ export default function Aluno({ match }) {
       try {
         setIsLoading(true);
         const { data } = await axios.get(`/alunos/${id}`);
-        const Fotos = get(data, 'Images{0}.url', '');
+        const Fotos = get(data, 'Images[0].url', '');
+
+        setFoto(Fotos);
 
         setNome(data.nome);
         setSobrenome(data.sobrenome);
@@ -50,7 +59,7 @@ export default function Aluno({ match }) {
     getData();
   }, [id]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let formErrors = false;
 
@@ -83,12 +92,67 @@ export default function Aluno({ match }) {
       toast.error('Altura inválida');
       formErrors = true;
     }
+
+    if (formErrors) return;
+
+    try {
+      setIsLoading(true);
+      if (id) {
+        await axios.put(`/alunos/${id}`, {
+          nome,
+          sobrenome,
+          email,
+          idade,
+          peso,
+          altura,
+        });
+        toast.success('Aluno(a) editado com sucesso');
+      } else {
+        const { data } = await axios.post(`/alunos/`, {
+          nome,
+          sobrenome,
+          email,
+          idade,
+          peso,
+          altura,
+        });
+        toast.success('Aluno(a) criado com sucesso');
+        history.push(`/aluno/${data.id}/edit`);
+      }
+      setIsLoading(false);
+    } catch (err) {
+      const status = get(err, 'response.status', 0);
+      const data = get(err, 'response.data', {});
+      const errors = get(data, 'errors', []);
+
+      if (err.length > 0) {
+        errors.map((error) => toast.error(error));
+      } else {
+        toast.error('Erro desconhecido');
+      }
+
+      if (status === 401) dispatch(actions.loginFailure());
+    }
   };
 
   return (
     <Container>
       <Loading isLoading={isLoading} />
-      <h1>{id ? 'Editar aluno' : 'Novo aluno'}</h1>
+
+      <Title>{id ? 'Editar aluno' : 'Novo aluno'}</Title>
+
+      {id && (
+        <ProfilePicture>
+          {foto ? (
+            <img crossOrigin="" src={foto} alt={nome} />
+          ) : (
+            <FaUserCircle size={180} />
+          )}
+          <Link to={`/fotos/${id}`}>
+            <FaEdit size={24} />
+          </Link>
+        </ProfilePicture>
+      )}
 
       <Form onSubmit={handleSubmit}>
         <div>
