@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { toast } from 'react-toastify'
+import { toast } from 'react-toastify';
 import { isEmail } from 'validator';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -11,14 +11,14 @@ import * as actions from '../../store/modules/Auth/actions';
 export default function Register() {
   const dispatch = useDispatch();
 
-  const id = useSelector(state => state.auth.user.id);
-  const nomeStored = useSelector(state => state.auth.user.nome);
-  const emailStored = useSelector(state => state.auth.user.email);
-  const isLoading = useSelector(state => state.auth.isLoading);
+  const id = useSelector((state) => state.auth.user.id);
+  const nomeStored = useSelector((state) => state.auth.user.nome);
+  const emailStored = useSelector((state) => state.auth.user.email);
+  const isLoading = useSelector((state) => state.auth.isLoading);
 
-  const [ nome, setNome ] = useState('');
-  const [ email, setEmail ] = useState('');
-  const [ password, setPassword ] = useState('');
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   React.useEffect(() => {
     if (!id) return;
@@ -54,7 +54,7 @@ export default function Register() {
 
   return (
     <Container>
-      <h1>{ !id ? 'Crie sua conta' : 'Edite sua conta'}</h1>
+      <h1>{!id ? 'Crie sua conta' : 'Edite sua conta'}</h1>
       <Loading isLoading={isLoading} />
 
       <Form onSubmit={handleSubmit}>
@@ -63,10 +63,12 @@ export default function Register() {
             id="nome"
             type="text"
             value={nome}
-            onChange={e => setNome(e.target.value)}
-            placeholder=' '
+            onChange={(e) => setNome(e.target.value)}
+            placeholder=" "
           />
-          <label htmlFor="nome" name="nome">Seu nome</label>
+          <label htmlFor="nome" name="nome">
+            Seu nome
+          </label>
         </div>
 
         <div>
@@ -74,10 +76,12 @@ export default function Register() {
             id="email"
             type="email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder=' '
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder=" "
           />
-          <label htmlFor="email" name="email">Seu email</label>
+          <label htmlFor="email" name="email">
+            Seu email
+          </label>
         </div>
 
         <div>
@@ -85,10 +89,12 @@ export default function Register() {
             id="password"
             type="password"
             value={password}
-            onChange={e => setPassword(e.target.value)}
-            placeholder=' '
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder=" "
           />
-          <label htmlFor="password" name="password">Sua senha</label>
+          <label htmlFor="password" name="password">
+            Sua senha
+          </label>
         </div>
 
         <button type="submit">Salvar</button>

@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export default function (state = initialState, action) {
-  switch(action.type){
+  switch (action.type) {
     case types.LOGIN_SUCCESS: {
       const newState = { ...state };
       newState.isLoggedIn = true;
@@ -62,4 +62,4 @@ export default function (state = initialState, action) {
       return state;
     }
   }
-};
+}
