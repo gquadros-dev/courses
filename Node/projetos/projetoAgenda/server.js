@@ -16,15 +16,16 @@ mongoose.connect(process.env.CONNECTIONSTRING,
     .catch((e) => console.log(e));
 
 
-
+    
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
-const routes = require('./routes');
 const path = require('path');
 const helmet = require('helmet');
 const csrf = require('csurf');
+
 const { middlewareGlobal, checkCsrfError,csrfMiddleware } = require('./src/middlewares/middleware');
+const routes = require('./routes');
 
 // app.use(helmet());
 app.use(express.urlencoded({ extended: true }));// trata o body

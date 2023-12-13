@@ -2,6 +2,7 @@
   "name": "consumoapi",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://react.poliert.com.br/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
