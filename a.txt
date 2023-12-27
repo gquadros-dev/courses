@@ -1,0 +1,22 @@
+|XPROD                          |CODIGO|CPROD |QCOM|
+|-------------------------------|------|------|----|
+|CERV ANTARCTICA 600ML          |2     |5.022 |11  |
+|CERVE ANTARCTICA 350ML         |4     |5.129 |1   |
+|CERVE ANTARCTICA 350ML         |3     |5.129 |94  |
+|REFR PEPSI COLA 2L             |6     |5.188 |2   |
+|GOMA MAS TRIDENT MENTA 8G      |5     |892   |1   |
+|CERVE BUDWEISER LONG NECK 330ML|8     |12.185|1   |
+|REFR DE FRAMBOESA CAPRICHO 2LT |7     |20.161|2   |
+|CIGARRO KENT SILVER            |9     |20.213|1   |
+|CERVE ANTARCTICA 350ML         |12    |5.129 |50  |
+|CERVE GLACIAL 350ML            |11    |5.023 |50  |
+|CERV ANTARCTICA 600ML          |10    |5.022 |7   |
+|GATORADE MARACUJA 500ML        |13    |5.157 |10  |
+|CERVE GLACIAL 350ML            |14    |5.023 |22  |
+|CERVE GLACIAL 350ML            |15    |5.023 |130 |
+|REFR COCA COLA 2L              |17    |5.175 |3   |
+|GATORADE TANGERINA 500ML       |16    |5.156 |1   |
+|GELO GELOBÃO 3KG               |18    |8.288 |30  |
+|CERVE GLACIAL 350ML            |20    |5.023 |57  |
+|PASTILHA FINI MENTA            |19    |20.184|1   |
+|CERVE GLACIAL 350ML            |21    |5.023 |132 |

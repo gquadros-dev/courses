@@ -67,6 +67,10 @@ export default function Alunos() {
 
       <NovoAluno to="/aluno/">Novo aluno</NovoAluno>
 
+      <Link to={`/grafico/`}>
+        <FaExclamation />
+      </Link>
+
       <AlunoContainer>
         {alunos.map((aluno, index) => (
           <div key={String(aluno.id)}>

@@ -17,8 +17,15 @@ class MyClient(discord.Client):
         elif message.content == '?nivel':
             await message.author.send('Nível 1')
 
+    async def on_member_join(self, member):
+        guild = member.guild
+        if guild.system_channel is not None:
+            message = f'{member.mention} acabou de entrar no {guild.name}'
+            await guild.system_channel.send(message)
+
+
 intents = discord.Intents.default()
-intents.message_content = True
+intents.members = True
 
 client = MyClient(intents=intents)
-client.run('MTE4NDU3MzQ2NTc0ODA1ODI3Mg.GO1zCS.-_LOdApgYlaCPO6_EpUmYfWH367-tdyr5bElwY')
+client.run('MTE4NDU3MzQ2NTc0ODA1ODI3Mg.GKLuIa.9HCDBhvCgRwwziyTzag1GZoO9_0L6MZeUxQM-8')

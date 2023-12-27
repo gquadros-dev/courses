@@ -1,0 +1,42 @@
+[ 
+  {
+    "email": "charlesalexis@example.net", 
+    "username": "David", 
+    "first_name": "David", 
+    "last_name": "King", 
+    "phone": 9660338282, 
+    "city": "Donnaview"
+  },
+  {
+    "email": "annahart@example.org",
+    "username": "James", 
+    "first_name": "James", 
+    "last_name": "Edwards", 
+    "phone": 9820091814, 
+    "city": "South Sonyaville"
+  },
+  {
+    "email": "smithjames@example.org", 
+    "username": "Krista", 
+    "first_name": "Krista", 
+    "last_name": "Morris", 
+    "phone": 9479213529, 
+    "city": "North Markhaven"
+  },
+  {
+    "email": "brownbrittany@example.com", 
+    "username": "Amber", 
+    "first_name": "Amber", 
+    "last_name": "Parker", 
+    "phone": 9192389384, 
+    "city": "South Sonyaville"
+  },
+  {
+    "email": "herreracheryl@example.com", 
+    "username": "Megan", 
+    "first_name": "Megan", 
+    "last_name": "Hunter", 
+    "phone": 9783967746, 
+    "city": "North Markhaven"
+  }
+]
