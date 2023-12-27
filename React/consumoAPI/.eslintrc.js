@@ -7,7 +7,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    //'plugin:react/recommended',
+    'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
   ],
@@ -23,7 +23,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['prettier', 'react-hooks'], //'react',
+  plugins: ['react', 'prettier', 'react-hooks'], //'react',
   settings: {
     react: {
       version: 'detect',
